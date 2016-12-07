@@ -19,14 +19,16 @@ var requestComplete = function() {
 };
 
 var populateList = function(albums) {
-  console.log(albums);
-  // console.log(albums.items);
   var div = document.getElementById('albums');
   var ul = document.createElement('ul');
   div.appendChild(ul);
   albums.albums.items.forEach(function(album) {
     var listItem = document.createElement('li');
-    listItem.innerText = album.name;
+    var a = document.createElement('a');
+    a.innerText = album.name;
+    a.setAttribute('href', album.external_urls.spotify);
+    a.setAttribute('target', "_blank")
+    listItem.appendChild(a);
     ul.appendChild(listItem);
   });
 };
