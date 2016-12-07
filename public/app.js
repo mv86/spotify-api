@@ -28,7 +28,7 @@ var populateList = function(albums) {
     var a = document.createElement('a');
     var img = document.createElement('img');
     img.setAttribute('src', album.images[1].url);
-    a.innerText = album.name;
+    a.innerText = album.name + " by " + album.artists[0].name;
     a.setAttribute('href', album.external_urls.spotify);
     a.setAttribute('target', "_blank");
     a.appendChild(img);

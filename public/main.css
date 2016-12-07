@@ -1,9 +1,13 @@
-main{
+body {
+  background-color: tomato;
+}
+
+main {
   width: 300px;
   margin: 0 auto;
 }
 
-input{
+input {
   padding: 10px;
   border-radius: 5px;
   width: 400px;
@@ -11,7 +15,11 @@ input{
   margin: 10px;
 }
 
-.album{
+.album {
   padding: 5px;
+}
+
+li {
+  font-size: 25px;
 }
 
