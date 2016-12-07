@@ -21,13 +21,17 @@ var requestComplete = function() {
 var populateList = function(albums) {
   var div = document.getElementById('albums');
   var ul = document.createElement('ul');
+  console.log(albums);
   div.appendChild(ul);
   albums.albums.items.forEach(function(album) {
     var listItem = document.createElement('li');
     var a = document.createElement('a');
+    var img = document.createElement('img');
+    img.setAttribute('src', album.images[1].url);
     a.innerText = album.name;
     a.setAttribute('href', album.external_urls.spotify);
-    a.setAttribute('target', "_blank")
+    a.setAttribute('target', "_blank");
+    a.appendChild(img);
     listItem.appendChild(a);
     ul.appendChild(listItem);
   });
