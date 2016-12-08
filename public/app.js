@@ -19,6 +19,8 @@ var requestComplete = function() {
 };
 
 var populateList = function(albums) {
+  var input = document.getElementById('search-query');
+  input.setAttribute('placeholder', '   Click on an album to play it in Spotify!');
   var div = document.getElementById('albums');
   var ul = document.createElement('ul');
   console.log(albums);
